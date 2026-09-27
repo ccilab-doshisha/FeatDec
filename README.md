@@ -3,7 +3,7 @@ This is the official implementation of the decoder introduced in the paper "Feat
 
 This paper aims to analyse the feature space of a vision-related Deep Neural Network (DNN) by proposing a \textit{decoder} that can generate an image whose feature closely matches a user-specified feature. Supported by quantitative evidence of this close feature matching, our decoder facilitates precise analysis of the DNN's feature space. Our decoder is implemented as a \textit{guided diffusion model} that guides the image generation of a pre-trained diffusion model to minimise the Euclidean distance between the feature of a clean image estimated at each step and the user-specified feature. The key advantages of our decoder are its training-free applicability to analyse the feature spaces of different DNNs and its practical feasibility on a single COTS GPU. The experiments targeting CLIP's image encoder and ResNet-50 demonstrate the effectiveness of our decoder both as a feature-matching image generator and as a visual feature space analyser.
 
-<img width="800" src="https://github.com/KimiakiShirahama/FeatureSpaceAnalysisByGuidedDiffusionModel/blob/main/data/overview.png">
+<img width="800" src="https://github.com/ccilab-doshisha/FeatDec/blob/main/data/overview.png">
 
 ## Instllation
 Our decoder has been implemented by modifying a [**universal guided diffusion model** developed by A. Bansal *et al.*](https://github.com/arpitbansal297/Universal-Guided-Diffusion) and runs in the same environment as it. This environment can be constructed by the following commands:   
