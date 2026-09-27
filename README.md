@@ -37,7 +37,7 @@ In addition, when you want to analyse the feature space of another feature extra
 
 ## Image generation by targeting CLIP's image encoder with ResNet-50 backbone
 
-Using [CLIP's image encoder with ResNet-50 backbone](https://github.com/openai/CLIP) as the target feature extractor, the following command is used to generate an image whose feature closely matches the feature of an actual image:
+Using [CLIP's image encoder with ResNet-50 backbone](https://github.com/openai/CLIP) as the target feature extractor, the following command is used to generate an image whose feature closely matches the feature of an actual image (e.g., `data/bansal/og_img_0.png` below):
 ```
 python scripts/clip_guided.py --optim_forward_guidance --optim_forward_guidance_wt 4 --optim_num_steps 1000 8 --optim_early_emp_end 995 --optim_grad_clip_threshold 3.0 --optim_folder data/bansal/og_img_0.png.generated_check --optim_print --prompt data/bansal/og_img_0.png
 ```
@@ -49,14 +49,14 @@ python scripts/clip_guided2.py --optim_forward_guidance --optim_forward_guidance
 
 ## Image generation by targeting ResNet-50
 
-Using ResNet-50, especially [ResNet-50 configured with ResNet50_Weights.IMAGENET1K_V1](https://docs.pytorch.org/vision/main/models/generated/torchvision.models.resnet50.html#torchvision.models.ResNet50_Weights), as the target feature extractor, the following command is used to generate an image whose feature closely matches the feature of an actual image:
+Using ResNet-50, especially [ResNet-50 configured with ResNet50_Weights.IMAGENET1K_V1](https://docs.pytorch.org/vision/main/models/generated/torchvision.models.resnet50.html#torchvision.models.ResNet50_Weights), as the target feature extractor, the following command is used to generate an image whose feature closely matches the feature of an actual image (e.g., `data/bansal/og_img_0.png` below):
 ```
 python scripts/resnet50_guided.py --optim_forward_guidance --optim_forward_guidance_wt 4 --optim_num_steps 1000 8 --optim_early_emp_end 995 --optim_grad_clip_threshold 3.0 --optim_folder data/bansal/og_img_0.png.generated_check_res --optim_print --prompt data/bansal/og_img_0.png
 ```
 
 ## Image generation by targeting Vision Transformer
 
-Using vision transformer, especially [ViT-H/14 configured with ViT_H_14_ Weights.IMAGENET1K_SWAG_E2E_V1](https://docs.pytorch.org/vision/main/models/generated/torchvision.models.vit_h_14.html#torchvision.models.ViT_H_14_Weights), as the target feature extractor, the following command is used to generate an image whose feature closely matches the feature of an actual image:
+Using vision transformer, especially [ViT-H/14 configured with ViT_H_14_ Weights.IMAGENET1K_SWAG_E2E_V1](https://docs.pytorch.org/vision/main/models/generated/torchvision.models.vit_h_14.html#torchvision.models.ViT_H_14_Weights), as the target feature extractor, the following command is used to generate an image whose feature closely matches the feature of an actual image (e.g., `data/bansal/og_img_0.png` below):
 ```
 python scripts/vith14_guided.py --optim_forward_guidance --optim_forward_guidance_wt 4 --optim_num_steps 1000 8 --optim_early_emp_end 995 --optim_grad_clip_threshold 2.0 --optim_folder data/bansal/og_img_0.png.generated_check_res --optim_print --prompt data/bansal/og_img_0.png
 ```
